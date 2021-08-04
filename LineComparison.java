@@ -2,13 +2,22 @@ import java.lang.Math;
 import java.lang.*;
 public class LineComparison{
 
-    public double calcLength(int x1 ,int y1 ,int x2 ,int y2){
+    int x1 ,y1 , x2 , y2;
+    Double length;
+    //using constructor
+    LineComparison(int x1 ,int y1 ,int x2 ,int y2){
+        this.x1 = x1;
+        this.x2 = x2;
+        this.y1 = y1;
+        this.y2 = y2;
+    }
+    public double calcLength(){
 
         // Calculate length of first Line 
-        Double length =  Math.sqrt( Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2) );
+        length =  Math.sqrt( Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2) );
         return length;
     }
-    public void compare(Double length1 , Double length2){
+    public void compare( Double length1  ,  Double length2){
     
         int result =  length1.compareTo(length2);
     

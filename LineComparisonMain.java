@@ -5,7 +5,7 @@ public class LineComparisonMain{
 
         int x1 ,y1 , x2 , y2;
         Scanner sc= new Scanner(System.in);
-        LineComparison line = new LineComparison();
+        
         //Read first co-ordinates of First line
         System.out.println("Enter co-ordinates of First line"); 
         System.out.println("Enter first co-ordinates (x,y) ");  
@@ -19,8 +19,8 @@ public class LineComparisonMain{
         x2= sc.nextInt();  
         System.out.print("Enter y : "); 
         y2= sc.nextInt(); 
-
-        Double length1 = line.calcLength(x1 , y1 , x2 , y2);
+        LineComparison line1 = new LineComparison(x1 ,y1 , x2 , y2);
+        Double length1 = line1.calcLength();
         System.out.printf("Length of first line :%.2f " , length1);
         
         //Read first co-ordinates of Second line
@@ -37,9 +37,10 @@ public class LineComparisonMain{
         System.out.print("Enter y : "); 
         y2= sc.nextInt(); 
 
-        Double length2 = line.calcLength(x1 , y1 , x2 , y2);
+        LineComparison line2 = new LineComparison(x1 ,y1 , x2 , y2);
+        Double length2 = line2.calcLength();
         System.out.printf("Length of second line : %.2f " , length2);
 
-        line.compare(length1 , length2);
+        line1.compare(length1 , length2);
     }
 }
