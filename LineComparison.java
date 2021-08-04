@@ -11,15 +11,15 @@ public class LineComparison{
         this.y1 = y1;
         this.y2 = y2;
     }
-    public double calcLength(){
+    public double getLength(){
 
-        // Calculate length of first Line 
+        // Calculate length Line 
         length =  Math.sqrt( Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2) );
         return length;
     }
-    public void compare( Double length1  ,  Double length2){
-    
-        int result =  length1.compareTo(length2);
+    public void compare( LineComparison line2){
+        //here length is the variable inside the line1 object  
+        int result = length.compareTo(line2.length);
     
         if(result > 0) {
             System.out.println("\nFirst line is greater than second line");
