@@ -8,14 +8,16 @@ public class LineComparison{
         Double length =  Math.sqrt( Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2) );
         return length;
     }
-    public boolean checkEqual(Double length1 , Double length2){
-        
-        // Check equality of first and second line
-        if(length1.equals(length2)){
-            return true;
-        }
-        else{
-            return false;
+    public void compare(Double length1 , Double length2){
+    
+        int result =  length1.compareTo(length2);
+    
+        if(result > 0) {
+            System.out.println("\nFirst line is greater than second line");
+        } else if(result < 0) {
+            System.out.println("\nSecond line is greater than First line");
+        } else {
+            System.out.println("\nLines are equal");
         }
     }
 }
